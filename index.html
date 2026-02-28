@@ -1,0 +1,307 @@
+
+    <html>
+    <head>
+        <title>Toxicity Prediction Report</title>
+        <style>
+            body {
+                font-family: Arial;
+                margin: 40px;
+                background-color: #f4f6f8;
+            }
+            .box {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+                margin-bottom: 20px;
+            }
+            .prediction {
+                font-size: 22px;
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>🔬 AI-Based Toxicity Prediction Report</h1>
+
+        <div class="box">
+            <strong>SMILES:</strong><br>
+            O=C(N3CCC(OC(C=CC=C6)=C6C(C5)=O)5CC3)C1=CC(NC4=CC=CN=C4OC)=CN2C1=NC=C2
+        </div>
+
+        <div class="box">
+            <div class="prediction">
+                Prediction: Toxic
+            </div>
+            <br>
+            <strong>Toxicity Range:</strong>
+            41% - 60%
+        </div>
+
+        <div class="box">
+            <strong>Detected Toxicophores:</strong><br>
+            aniline<br>Ethylbenzene<br>Toluene<br>Phenol<br>β-Picoline<br>Pyridine<br>Melphalan<br>Sepiolite<br>Phenelzine sulfate<br>Chromium (III) compounds<br>Gyromitrin<br>Fluorides (inorganic, used in drinking-water)<br>Chromium (VI) compounds<br>Streptozotocin<br>Vincristine sulfate<br>Digoxin<br>Daunomycin (Daunorubicin)<br>Luteoskyrin<br>Indium phosphide<br>Oestradiol mustard
+        </div>
+
+        <div class="box">
+            <strong>Interactive 3D Molecular Visualization</strong>
+            <br><br>
+            <div id="3dmolviewer_17723007007367954"  style="position: relative; width: 900px; height: 500px;">
+        <p id="3dmolwarning_17723007007367954" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdn.jsdelivr.net/npm/3dmol@2.5.4/build/3Dmol-min.js');
+}
+
+var viewer_17723007007367954 = null;
+var warn = document.getElementById("3dmolwarning_17723007007367954");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17723007007367954 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17723007007367954"),{backgroundColor:"white"});
+viewer_17723007007367954.zoomTo();
+	viewer_17723007007367954.addModel("\n     RDKit          3D\n\n 61 66  0  0  0  0  0  0  0  0999 V2000\n   -0.6183    0.4198    2.5411 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3496    0.6311    1.3566 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8874    0.3107    0.8030 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9106   -0.2087    1.7038 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3119    0.2015    1.2633 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6059   -0.1488   -0.2126 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8116    0.5248   -0.6393 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9859   -0.0224   -0.2040 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1019    0.8131   -0.2172 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.3385    0.3368    0.2243 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4634   -0.9790    0.6727 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3531   -1.8235    0.6712 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1194   -1.3410    0.2241 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9437   -2.2243    0.1679 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7148   -1.6555   -0.4842 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9927   -3.3776    0.5824 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4797    0.4595   -1.0761 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0914    0.0326   -0.6185 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3932    1.2312    0.4790 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.6317    0.6931    0.5220 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.7570    1.2296   -0.2500 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.0001    0.6433   -0.1807 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.3839   -0.7170   -0.2176 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.4988   -1.7823   -0.3887 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.9657   -3.0970   -0.3588 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.3170   -3.3161   -0.1547 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.2177   -2.3283    0.0135 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.7346   -1.0633   -0.0126 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.6181   -0.0003    0.1332 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.9441   -0.4201    0.4387 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5317    2.3729   -0.9285 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.2609    2.9373   -0.9525 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1593    2.4065   -0.2922 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0799    3.1316   -0.5177 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.4874    4.1625   -1.3225 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.8288    4.0643   -1.6050 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8055   -1.2990    1.7361 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7412    0.1586    2.7223 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0498   -0.2484    1.9372 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4247    1.2868    1.3952 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0073    1.8401   -0.5612 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2050    0.9940    0.2200 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.4267   -1.3482    1.0168 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.4527   -2.8533    1.0075 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8430   -2.2020   -0.1130 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8103   -1.8538   -1.5590 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6249    0.1966   -2.1315 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5498    1.5556   -1.0371 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9480   -1.0455   -0.7569 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3385    0.5113   -1.2458 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8340   -0.1385    1.1928 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.7838    1.2383   -0.4489 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.4434   -1.6156   -0.5724 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2859   -3.9313   -0.4942 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.7216   -4.3239   -0.1238 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -9.5534    0.4785    0.5762 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.9767   -0.9894    1.3742 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -9.3791   -0.9922   -0.3880 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.3000    2.8827   -1.4957 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2077    4.9224   -1.6566 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4915    4.6792   -2.1961 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  7  8  1  0\n  8  9  2  0\n  9 10  1  0\n 10 11  2  0\n 11 12  1  0\n  8 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  2  0\n  6 17  1  0\n 17 18  1  0\n  2 19  1  0\n 19 20  2  0\n 20 21  1  0\n 21 22  1  0\n 22 23  1  0\n 23 24  2  0\n 24 25  1  0\n 25 26  2  0\n 26 27  1  0\n 27 28  2  0\n 28 29  1  0\n 29 30  1  0\n 21 31  2  0\n 31 32  1  0\n 32 33  1  0\n 33 34  2  0\n 34 35  1  0\n 35 36  2  0\n 33 19  1  0\n 36 32  1  0\n 18  3  1  0\n 28 23  1  0\n  6 15  1  0\n 13 12  2  0\n  4 37  1  0\n  4 38  1  0\n  5 39  1  0\n  5 40  1  0\n  9 41  1  0\n 10 42  1  0\n 11 43  1  0\n 12 44  1  0\n 15 45  1  0\n 15 46  1  0\n 17 47  1  0\n 17 48  1  0\n 18 49  1  0\n 18 50  1  0\n 20 51  1  0\n 22 52  1  0\n 24 53  1  0\n 25 54  1  0\n 26 55  1  0\n 30 56  1  0\n 30 57  1  0\n 30 58  1  0\n 31 59  1  0\n 35 60  1  0\n 36 61  1  0\nM  END\n","mol");
+	viewer_17723007007367954.setStyle({"stick": {}});
+	viewer_17723007007367954.addSphere({"center": {"x": -3.7569865518697902, "y": 1.2295533508395726, "z": -0.24999751685136753}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 21},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -5.000084281558529, "y": 0.6432944875641551, "z": -0.18068961949244408}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 22},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -5.383890198521664, "y": -0.7170365506014267, "z": -0.2175638379157069}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 23},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 5.985883208184971, "y": -0.022413674533336213, "z": -0.20396513336574418}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 8},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 7.10194831463408, "y": 0.8131366698947129, "z": -0.21723045743243663}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 9},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 8.338533961670755, "y": 0.3368096588730038, "z": 0.22427424687864952}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 10},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 8.463400622628425, "y": -0.9789546674324479, "z": 0.6727332358372796}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 11},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 7.3531055528670315, "y": -1.823480360078976, "z": 0.6712356932993809}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 12},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 6.119357427680768, "y": -1.340950674828914, "z": 0.22413945052717005}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 13},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 4.943699164756257, "y": -2.2242933738941297, "z": 0.16788524369665336}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 14},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 3.714815115405529, "y": -1.6554637572991584, "z": -0.48422678783320194}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 15},{"stick": {"color": "red"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 5.985883208184971, "y": -0.022413674533336213, "z": -0.20396513336574418}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 8},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 7.10194831463408, "y": 0.8131366698947129, "z": -0.21723045743243663}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 9},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 8.338533961670755, "y": 0.3368096588730038, "z": 0.22427424687864952}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 10},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 8.463400622628425, "y": -0.9789546674324479, "z": 0.6727332358372796}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 11},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 7.3531055528670315, "y": -1.823480360078976, "z": 0.6712356932993809}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 12},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 6.119357427680768, "y": -1.340950674828914, "z": 0.22413945052717005}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 13},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 4.943699164756257, "y": -2.2242933738941297, "z": 0.16788524369665336}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 14},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 4.811585509996838, "y": 0.5248184217443078, "z": -0.6393133636092405}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 7},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 5.985883208184971, "y": -0.022413674533336213, "z": -0.20396513336574418}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 8},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 7.10194831463408, "y": 0.8131366698947129, "z": -0.21723045743243663}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 9},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 8.338533961670755, "y": 0.3368096588730038, "z": 0.22427424687864952}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 10},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 8.463400622628425, "y": -0.9789546674324479, "z": 0.6727332358372796}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 11},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 7.3531055528670315, "y": -1.823480360078976, "z": 0.6712356932993809}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 12},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 6.119357427680768, "y": -1.340950674828914, "z": 0.22413945052717005}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 13},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -1.3932081163659429, "y": 1.2312407376600436, "z": 0.4789648172714484}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 19},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -2.6316695837532302, "y": 0.6931234545278917, "z": 0.5220335291492242}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 20},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -3.7569865518697902, "y": 1.2295533508395726, "z": -0.24999751685136753}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 21},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -3.5316707985246416, "y": 2.3729099327246574, "z": -0.9285331008771106}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 31},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -2.2609276098910627, "y": 2.9372894396417766, "z": -0.9524966633201886}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 32},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -1.1592787486443497, "y": 2.4065157038028953, "z": -0.29222514098537766}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 33},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -1.3932081163659429, "y": 1.2312407376600436, "z": 0.4789648172714484}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 19},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -2.6316695837532302, "y": 0.6931234545278917, "z": 0.5220335291492242}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 20},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -3.7569865518697902, "y": 1.2295533508395726, "z": -0.24999751685136753}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 21},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -5.383890198521664, "y": -0.7170365506014267, "z": -0.2175638379157069}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 23},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -4.4988486850616765, "y": -1.7822963466130894, "z": -0.3886981541065077}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 24},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -4.965658787924334, "y": -3.0969653677813174, "z": -0.3587998448207005}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 25},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -6.317045373233858, "y": -3.3161303305676357, "z": -0.15470891559698283}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 26},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -7.217727785523046, "y": -2.32830895523529, "z": 0.013514346206826434}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 27},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -6.734594826039633, "y": -1.063342694097278, "z": -0.012606137112325794}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 28},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -3.5316707985246416, "y": 2.3729099327246574, "z": -0.9285331008771106}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 31},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -2.2609276098910627, "y": 2.9372894396417766, "z": -0.9524966633201886}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 32},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -1.1592787486443497, "y": 2.4065157038028953, "z": -0.29222514098537766}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 33},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723007007367954.addSphere({"center": {"x": -0.34955972350145176, "y": 0.6311335982274321, "z": 1.3566164913633842}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 0.887385883328746, "y": 0.3106838976650825, "z": 0.8030031323995852}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.9106280493779488, "y": -0.20871963940694488, "z": 1.7038429538405822}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723007007367954.addSphere({"center": {"x": 1.091369214550741, "y": 0.032564500382627384, "z": -0.6184922469938287}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723007007367954.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723007007367954.zoomTo();
+viewer_17723007007367954.render();
+});
+</script>
+        </div>
+
+        <hr>
+        <p>
+        Generated using GAT-based Explainable Toxicity Framework
+        </p>
+
+    </body>
+    </html>
+    
