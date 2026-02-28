@@ -1,0 +1,323 @@
+
+    <html>
+    <head>
+        <title>Toxicity Prediction Report</title>
+        <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+        <style>
+            body {
+                font-family: Arial;
+                margin: 40px;
+                background-color: #f4f6f8;
+            }
+            .box {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+                margin-bottom: 20px;
+            }
+            .prediction {
+                font-size: 22px;
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>🔬 AI-Based Toxicity Prediction Report</h1>
+
+        <div class="box">
+            <strong>SMILES:</strong><br>
+            O=C(N3CCC(OC(C=CC=C6)=C6C(C5)=O)5CC3)C1=CC(NC4=CC=CN=C4OC)=CN2C1=NC=C2
+        </div>
+
+        <div class="box">
+            <div class="prediction">
+                Prediction: Toxic
+            </div>
+            <br>
+            <strong>Toxicity Range:</strong>
+            41% - 60%
+        </div>
+
+        <div class="box">
+            <strong>Detected Toxicophores:</strong><br>
+            aniline<br>Ethylbenzene<br>Toluene<br>Phenol<br>β-Picoline<br>Pyridine<br>Melphalan<br>Sepiolite<br>Phenelzine sulfate<br>Chromium (III) compounds<br>Gyromitrin<br>Fluorides (inorganic, used in drinking-water)<br>Chromium (VI) compounds<br>Streptozotocin<br>Vincristine sulfate<br>Digoxin<br>Daunomycin (Daunorubicin)<br>Luteoskyrin<br>Indium phosphide<br>Oestradiol mustard
+        </div>
+
+        <div class="box">
+            <strong>Interactive 3D Molecular Visualization</strong>
+            <br><br>
+            <div id="3dmolviewer_17723030360121536"  style="position: relative; width: 900px; height: 500px;">
+        <p id="3dmolwarning_17723030360121536" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdn.jsdelivr.net/npm/3dmol@2.5.4/build/3Dmol-min.js');
+}
+
+var viewer_17723030360121536 = null;
+var warn = document.getElementById("3dmolwarning_17723030360121536");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17723030360121536 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17723030360121536"),{backgroundColor:"white"});
+viewer_17723030360121536.zoomTo();
+	viewer_17723030360121536.addModel("\n     RDKit          3D\n\n 61 66  0  0  0  0  0  0  0  0999 V2000\n    0.4737    1.4382    1.7921 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2695    0.4349    1.1059 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9808    0.1338    0.5828 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1220    0.9350    1.0171 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.4133    0.1234    0.9750 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.7319   -0.3886   -0.4559 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5525    0.5745   -1.1554 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8724    0.6117   -0.7986 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.5751    1.7641   -1.1495 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.9225    1.8953   -0.8049 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.5727    0.8710   -0.1143 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.8782   -0.2903    0.2248 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.5307   -0.4165   -0.1267 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.7922   -1.6537    0.1726 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.4188   -1.7621   -0.4264 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.3066   -2.5632    0.8155 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4374   -0.4891   -1.3022 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2295   -0.8671   -0.4552 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4151   -0.4622    0.7872 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5258    0.1131    0.2776 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7410   -0.6470   -0.0301 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8325   -0.0067   -0.5756 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5586    1.0919   -0.0430 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1642    1.8313    1.0736 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9161    2.9304    1.4900 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0490    3.2700    0.7709 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.4748    2.5974   -0.3166 N   0  0  0  0  0  0  0  0  0  0  0  0\n    6.7221    1.5390   -0.7013 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1219    0.7908   -1.8026 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.2837    1.3160   -2.4365 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6881   -1.9803    0.1605 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5488   -2.5650    0.7030 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3999   -1.8618    1.0493 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4904   -2.6697    1.5602 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0510   -3.9197    1.5421 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3165   -3.8824    1.0078 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9514    1.3020    2.0357 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1867    1.8105    0.3598 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2251    0.7433    1.3700 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.2967   -0.7277    1.6588 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.0717    2.5671   -1.6826 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.4647    2.7991   -1.0738 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -9.6220    0.9744    0.1528 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.3872   -1.0958    0.7501 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.5527   -2.1631   -1.4393 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.8312   -2.4813    0.1550 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5621   -1.2107   -2.1195 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.2396    0.4737   -1.7954 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4058   -1.8284    0.0367 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3490   -0.9651   -1.0973 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5352    1.1798    0.0658 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4877   -0.6203   -1.0622 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2864    1.5643    1.6528 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6194    3.5070    2.3597 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6627    4.1180    1.0631 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5057    0.6821   -3.3007 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1117    2.3330   -2.8062 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.1502    1.2789   -1.7677 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5158   -2.6416   -0.0625 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5122   -4.7819    1.9150 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0529   -4.6536    0.8352 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  7  8  1  0\n  8  9  2  0\n  9 10  1  0\n 10 11  2  0\n 11 12  1  0\n  8 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  2  0\n  6 17  1  0\n 17 18  1  0\n  2 19  1  0\n 19 20  2  0\n 20 21  1  0\n 21 22  1  0\n 22 23  1  0\n 23 24  2  0\n 24 25  1  0\n 25 26  2  0\n 26 27  1  0\n 27 28  2  0\n 28 29  1  0\n 29 30  1  0\n 21 31  2  0\n 31 32  1  0\n 32 33  1  0\n 33 34  2  0\n 34 35  1  0\n 35 36  2  0\n 33 19  1  0\n 36 32  1  0\n 18  3  1  0\n 28 23  1  0\n  6 15  1  0\n 13 12  2  0\n  4 37  1  0\n  4 38  1  0\n  5 39  1  0\n  5 40  1  0\n  9 41  1  0\n 10 42  1  0\n 11 43  1  0\n 12 44  1  0\n 15 45  1  0\n 15 46  1  0\n 17 47  1  0\n 17 48  1  0\n 18 49  1  0\n 18 50  1  0\n 20 51  1  0\n 22 52  1  0\n 24 53  1  0\n 25 54  1  0\n 26 55  1  0\n 30 56  1  0\n 30 57  1  0\n 30 58  1  0\n 31 59  1  0\n 35 60  1  0\n 36 61  1  0\nM  END\n","mol");
+	viewer_17723030360121536.setStyle({"stick": {}});
+	viewer_17723030360121536.addSphere({"center": {"x": 3.7409851616795833, "y": -0.6470158052993619, "z": -0.03013910606336739}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 21},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 4.832531592386654, "y": -0.0067168138761255995, "z": -0.5755623085813821}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 22},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 5.558564911849766, "y": 1.0918891571524976, "z": -0.04304863178566707}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 23},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addLabel("aniline",{"position": {"x": 4.710693888638668, "y": 0.14605217932567002, "z": -0.21625001547680553}, "backgroundColor": "red", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": -5.872407836818494, "y": 0.6116687508858255, "z": -0.7986443701640167}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 8},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -6.575070446818685, "y": 1.7640871001182676, "z": -1.14949649464207}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 9},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -7.92250388977285, "y": 1.8952613406771923, "z": -0.8048850609767682}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 10},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -8.572719819881303, "y": 0.871020166206213, "z": -0.11427219929290482}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 11},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -7.878225161855648, "y": -0.29034231407303507, "z": 0.22479902985378217}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 12},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -6.530748391312419, "y": -0.4165289705918365, "z": -0.12673387896498775}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 13},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -5.792173969312107, "y": -1.6537066698886058, "z": 0.17262504960351488}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 14},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -4.418819713625033, "y": -1.7620677290133513, "z": -0.4263733181144661}, "radius": 0.35, "color": "red", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 15},{"stick": {"color": "red"}});
+	viewer_17723030360121536.addLabel("Ethylbenzene",{"position": {"x": -6.695333653674568, "y": 0.1274239592900837, "z": -0.37787265533723957}, "backgroundColor": "red", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": -5.872407836818494, "y": 0.6116687508858255, "z": -0.7986443701640167}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 8},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -6.575070446818685, "y": 1.7640871001182676, "z": -1.14949649464207}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 9},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -7.92250388977285, "y": 1.8952613406771923, "z": -0.8048850609767682}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 10},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -8.572719819881303, "y": 0.871020166206213, "z": -0.11427219929290482}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 11},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -7.878225161855648, "y": -0.29034231407303507, "z": 0.22479902985378217}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 12},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -6.530748391312419, "y": -0.4165289705918365, "z": -0.12673387896498775}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 13},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -5.792173969312107, "y": -1.6537066698886058, "z": 0.17262504960351488}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 14},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Toluene",{"position": {"x": -7.020549930824501, "y": 0.3973513433334316, "z": -0.3709439892262072}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": -4.552534755160144, "y": 0.574533232923729, "z": -1.1553810273528595}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 7},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -5.872407836818494, "y": 0.6116687508858255, "z": -0.7986443701640167}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 8},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -6.575070446818685, "y": 1.7640871001182676, "z": -1.14949649464207}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 9},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -7.92250388977285, "y": 1.8952613406771923, "z": -0.8048850609767682}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 10},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -8.572719819881303, "y": 0.871020166206213, "z": -0.11427219929290482}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 11},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -7.878225161855648, "y": -0.29034231407303507, "z": 0.22479902985378217}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 12},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -6.530748391312419, "y": -0.4165289705918365, "z": -0.12673387896498775}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 13},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Phenol",{"position": {"x": -6.843458614517077, "y": 0.7156713294494794, "z": -0.5606591430771178}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 1.41507608613165, "y": -0.46215486006737616, "z": 0.787160735780774}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 19},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 2.5258208863322764, "y": 0.11311019187010916, "z": 0.27756565279697665}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 20},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 3.7409851616795833, "y": -0.6470158052993619, "z": -0.03013910606336739}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 21},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 3.6880794840353484, "y": -1.980328990161652, "z": 0.16047458763641329}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 31},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 2.548764648319311, "y": -2.5649535467025206, "z": 0.7030417257232736}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 32},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 1.3999377105427584, "y": -1.8618256323019244, "z": 1.049251223620348}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 33},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("\u03b2-Picoline",{"position": {"x": 2.2268821826241503, "y": -0.9954684538921714, "z": 0.5790302636347286}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 1.41507608613165, "y": -0.46215486006737616, "z": 0.787160735780774}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 19},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 2.5258208863322764, "y": 0.11311019187010916, "z": 0.27756565279697665}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 20},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 3.7409851616795833, "y": -0.6470158052993619, "z": -0.03013910606336739}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 21},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 5.558564911849766, "y": 1.0918891571524976, "z": -0.04304863178566707}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 23},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 5.164215420589687, "y": 1.8312711760945402, "z": 1.073597383972017}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 24},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 5.916072405410396, "y": 2.930389488591116, "z": 1.4900316728317111}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 25},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 7.048964502264745, "y": 3.270047821093354, "z": 0.7708557463493174}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 26},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 7.474756142469345, "y": 2.597400782252237, "z": -0.31662804142393697}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 27},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 6.722120481243147, "y": 1.538955858059144, "z": -0.7012523970764208}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 28},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 3.6880794840353484, "y": -1.980328990161652, "z": 0.16047458763641329}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 31},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 2.548764648319311, "y": -2.5649535467025206, "z": 0.7030417257232736}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 32},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": 1.3999377105427584, "y": -1.8618256323019244, "z": 1.049251223620348}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 33},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addLabel("Pyridine",{"position": {"x": 4.433613153405668, "y": 0.4880654700483469, "z": 0.4350758793634532}, "backgroundColor": "orange", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Melphalan",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addLabel("Sepiolite",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "orange", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Phenelzine sulfate",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Chromium (III) compounds",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Gyromitrin",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addLabel("Fluorides (inorganic, used in drinking-water)",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "orange", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addLabel("Chromium (VI) compounds",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "orange", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Streptozotocin",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addLabel("Vincristine sulfate",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "orange", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Digoxin",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Daunomycin (Daunorubicin)",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Luteoskyrin",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "orange", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "orange"}});
+	viewer_17723030360121536.addLabel("Indium phosphide",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "orange", "fontColor": "white"});
+	viewer_17723030360121536.addSphere({"center": {"x": 0.2695113013281252, "y": 0.43488946541752616, "z": 1.1058570259486824}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 2},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -0.9807520760444071, "y": 0.13381965942430257, "z": 0.5827537339938147}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 3},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -2.1219556369501276, "y": 0.9350243146391974, "z": 1.017139118254183}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 4},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addSphere({"center": {"x": -1.2295410816068104, "y": -0.8671040369417563, "z": -0.4551693201377104}, "radius": 0.35, "color": "green", "opacity": 0.9});
+	viewer_17723030360121536.addStyle({"serial": 18},{"stick": {"color": "green"}});
+	viewer_17723030360121536.addLabel("Oestradiol mustard",{"position": {"x": -1.015684373318305, "y": 0.15915735063481745, "z": 0.5626451395147424}, "backgroundColor": "green", "fontColor": "white"});
+	viewer_17723030360121536.zoomTo();
+viewer_17723030360121536.render();
+});
+</script>
+        </div>
+
+    </body>
+    </html>
+    
